@@ -1,0 +1,32 @@
+<h1>Selamat datang di Contact App</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nama</th>
+      <th scope="col">NoHP</th>
+      <th scope="col">Aksi 1</th>
+      <th scope="col">Aksi 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let i= 0; contacts.forEach((note, i) => { i++ %>
+    <tr>
+      <th scope="row"><%= i++ %></th>
+      <td><%= note.nama %></td>
+      <td><%= note.noHP %></td>
+      <td>
+        <a href="/details/nama/<%= note.nama %>">
+          <button type="button" class="badge rounded-pill px-4 py-2 btn btn-success">Details</button>
+        </a>
+      </td>
+      <td>
+        <a href="/delete/nama/<%= note.nama %>">
+          <button type="button" class="badge rounded-pill px-4 py-2 btn btn-danger">Hapus</button>
+        </a>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
